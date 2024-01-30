@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+body {
+  max-width: 800px;
+  max-height: 700px;
+  border: 5px;
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-cloud-background_41066-1919.jpg?w=2000");
+  background-image: 300px;
+}
+
+.card-bodys {
+  text-align: center;
+
+  color: #202124;
+  background-color: #e4b5f4;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 80%;
+}
+.card-title {
+  font-size: 30px;
+  text-align: center;
+
+  color: #c4207f;
+}
+.Me {
+  text-align: center;
+}
+.weather.temperature.active {
+  color: black;
+  cursor: default;
+}
+.weather.temperature.active:hover {
+  text-decoration: none;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.wind {
+  text-align: center;
+}
+.current {
+  background-color: #d87daf;
+  border-radius: 20%;
+  color: #fbc2fc;
+}
+.current:hover {
+  background-color: #6acaf7;
+  color: #00afa1;
+}
+.search:hover {
+  background-color: #6acaf7;
+  color: #00afa1;
+}
+.search {
+  background-color: #d87daf;
+  border-radius: 20%;
+  color: #fbc2fc;
+}
+.open-link {
+  padding-left: 15px;
+  padding-top: 5px;
+  color: #9b5d98;
+}
