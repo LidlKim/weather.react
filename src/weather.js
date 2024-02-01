@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-
+import 'bootstrap/dist/css/bootstrap.css';
 export default function Weather() {
   return (
     <body>
