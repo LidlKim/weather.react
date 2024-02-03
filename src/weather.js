@@ -47,23 +47,18 @@ export default function Weather() {
               <div className="card-text" id="info">
                 <span className="card-mid" id="date" />
               </div>
-              <img
-                src="https://openweathermap.org/img/wn/04d@2x.png"
-                className="icon"
-                id="icon"
-                alt="weather icon"
-              />
+              <img href="./pingclouds.jpeg" width="992" alt={"ping clouds"} />
               <div className="weather-temperature">
                 <form>
                   <span className="cel" id="temperature">
                     00
                   </span>{" "}
-                  <a href="#" id="celsius-link" className="active">
-                    °C
-                  </a>
-                  <a href="#" className="fan" id="fan-link">
-                    °F
-                  </a>
+                  <button type="button" id="celsius-link" className="active">
+                     °C
+                     </button>
+                     <button type="button" className="fan" id="fan-link">
+                        °F
+                        </button>
                 </form>
               </div>
               <h5 className="card-title" id="description">

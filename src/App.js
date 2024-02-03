@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-
 import Weather from "./weather.js";
 import './index.css';
 
