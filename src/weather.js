@@ -47,7 +47,7 @@ export default function Weather() {
               <div className="card-text" id="info">
                 <span className="card-mid" id="date" />
               </div>
-              <img href="./pingclouds.jpeg" width="992" alt={"ping clouds"} />
+              
               <div className="weather-temperature">
                 <form>
                   <span className="cel" id="temperature">
