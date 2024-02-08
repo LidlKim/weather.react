@@ -3,6 +3,11 @@ import "./index.css";
 import axios from "axios";
 
 export default function Weather() {
+   function search() {
+    const apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   return (
     <body>
       <img href="./pingclouds.jpeg" width="992" alt={"ping clouds"} />
