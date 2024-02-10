@@ -78,7 +78,7 @@ export default function Weather(props) {
             <div className="card-bodys">
               <span className="title"> Location:</span>
               <h5 className="card-title" id="tititle">
-              data={weatherData}  coordinates={weatherData.coordinates}
+              <Weather data={weatherData}  coordinates={weatherData.coordinates} />
               </h5>
               <div className="card-text" id="info">
                 <span className="card-mid" id="date" />
