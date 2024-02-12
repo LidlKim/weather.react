@@ -7,10 +7,10 @@ export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [temperature, setTemperature] = useState(null);
   function handleResponse(response) {
+    console.log(response.data);
      setTemperature(response.data.main.temp);
      setReady(true);
-
-  
+}
   if (ready ) {
   return (
     <body>
@@ -108,5 +108,5 @@ export default function Weather(props) {
     return "Loading..";
   }
 }
-  }
+  
 
