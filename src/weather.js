@@ -52,7 +52,7 @@ export default function Weather(props) {
             <div className="card-bodys">
               <span className="title"> Location:</span>
               <h5 className="card-title" id="tititle">
-              {temperature}
+              Glasgow
               </h5>
               <div className="card-text" id="info">
                 <span className="card-mid" id="date" />
@@ -61,7 +61,7 @@ export default function Weather(props) {
               <div className="weather-temperature">
                 <form>
                   <span className="cel" id="temperature">
-                    00
+                    {Math.round(temperature)}
                   </span>{" "}
                   <button type="button" id="celsius-link" className="active">
                      °C
