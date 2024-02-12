@@ -4,14 +4,21 @@ import axios from "axios";
 
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response) {
     console.log(response.data);
-     setTemperature(response.data.main.temp);
-     setReady(true);
+     setWeatherData( {
+       ready: true,
+       temperature: response.data.main.temp,
+       humidity: response.data.main.humidity,
+       wind: response.data.wind.speed,
+       city: response.data.name,
+       description:response.data.weather[0].description
+     });
+
+    
 }
-  if (ready ) {
+  if (weatherData.ready ) {
   return (
     <body>
       <img href="./pingclouds.jpeg" width="992" alt={"ping clouds"} />
@@ -61,7 +68,7 @@ export default function Weather(props) {
               <div className="weather-temperature">
                 <form>
                   <span className="cel" id="temperature">
-                    {Math.round(temperature)}
+                    {Math.round(weatherData.temperature)}
                   </span>{" "}
                   <button type="button" id="celsius-link" className="active">
                      °C
@@ -72,7 +79,7 @@ export default function Weather(props) {
                 </form>
               </div>
               <h5 className="card-title" id="description">
-                Windy
+                {weatherData.description}
               </h5>
               <span className="Prec"> 💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙</span>
               <span className="Precipitation" id="Precipitation">
@@ -80,11 +87,9 @@ export default function Weather(props) {
               </span>{" "}
               <span className="percentage"> 💙💙💙💙💙💙💙💙💙💙💙</span>
               <strong className="wind-title" id="wind-title">
-                Wind Speed:
+                Wind Speed: {weatherData.wind}
               </strong>{" "}
-              <span className="wind" id="wind">
-                Wind
-              </span>{" "}
+              <span className="humidity" id="humidity">Humidity: {weatherData.humidity}</span>
               <span className="unit" id="unit">
                 %
               </span>
