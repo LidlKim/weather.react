@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
 import Weatherinfo from "./WeatherInfo";
+import WeatherIcon from "./WeatherIcon"
 
 
 export default function Weather(props) {
@@ -17,6 +18,7 @@ export default function Weather(props) {
        wind: response.data.wind.speed,
        city: response.data.name,
        description:response.data.weather[0].description,
+       iconURL: response.data.weather[0].icon,
        date: new Date(response.data.dt * 1000)
      });
 
@@ -97,6 +99,11 @@ export default function Weather(props) {
                         °F
                         </button>
                 </form>
+                
+
+               <div className="float-left">
+               <WeatherIcon code={props.data.icon}  alt={props.data.description}/>
+               </div>
                 <Weatherinfo data={weatherData}/>
               </div>
               </div>
