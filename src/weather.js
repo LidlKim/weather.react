@@ -81,7 +81,7 @@ export default function Weather(props) {
             <div className="card-bodys">
               <span className="title"> Location:</span>
               <h5 className="card-title" id="tititle">
-              {props.weatherData.city}
+              {props.data.name}
               </h5>
               <div className="card-text" id="info">
                 <span className="card-mid" id="date" />
@@ -102,7 +102,7 @@ export default function Weather(props) {
                 
 
                <div className="float-left">
-               <WeatherIcon code={props.data.icon}  alt={props.data.description}/>
+               <WeatherIcon code={props.data.icon}  />
                </div>
                 <Weatherinfo data={weatherData}/>
               </div>
