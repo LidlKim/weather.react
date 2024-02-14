@@ -10,7 +10,8 @@ export default function Weatherinfo(props) {
               <h5 className="card-title" id="description">
                 {props.data.description}
               </h5>
-              <span className="Date"> <FormattedDate date={props.data.date} />
+              <span className="Date"> 
+              <FormattedDate date={props.data.date} />
               </span>
               <span className="Precipitation" id="Precipitation">
                 💙💙💙💙💙
