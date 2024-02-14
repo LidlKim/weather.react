@@ -1,29 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+import FormattedDate from "./FormattedDate";
+
 
 export default function Weatherinfo(props) {
-    const [city, setCity] = useState(props.defaultCity);
-    function handleSubmit(event){
-        event.preventDefault();
-    }
-    function handleCityChange(event){
-       setCity(event.target.value);
-    }
+    
     return (
         <div className="WeatherInfo">
-           <form id="search-form" onSubmit={handleSubmit}>
-          <input
-            type="search"
-            className="form-control"
-            id="po"
-            placeholder="Enter a city"
-            onChange={handleCityChange}
-          />
-          <input type="submit" className="search" id="searchbmit" />
-          <button className="current" id="current">
-            Current Location
-          </button>
-        </form>
+             
+              <h5 className="card-title" id="description">
+                {props.data.description}
+              </h5>
+              <span className="Date"> <FormattedDate date={props.data.date} />
+              </span>
+              <span className="Precipitation" id="Precipitation">
+                💙💙💙💙💙
+              </span>{" "}
+              <span className="percentage"> 💙💙💙💙💙</span>
+              <strong className="wind-title" id="wind-title">
+                Wind Speed: {props.data.wind}
+              </strong>{" "}
+              <span className="humidity" id="humidity">Humidity: {props.data.humidity}</span>
+              <span className="unit" id="unit">
+                %
+              </span>
+            
+          
+        <a
+          href="vhttps://github.com/LidlKim/weather.react"
+          className="open-link"
+        >
+          Open Source by Hester Grant
+        </a>
+      </div>
 
-    </div>
+    
     )
 }
