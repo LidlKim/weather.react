@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import Weatherinfo from "./WeatherInfo";
 
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
      setWeatherData( {
@@ -20,6 +22,18 @@ export default function Weather(props) {
 
     
 }
+function search() {
+  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+}
+ function handleSubmit(event){
+        event.preventDefault();
+        search();
+    }
+    function handleCityChange(event){
+       setCity(event.target.value);
+    }
   if (weatherData.ready ) {
   return (
     <body>
@@ -43,18 +57,21 @@ export default function Weather(props) {
           </div>
         </div>
 
-        <form id="search-form">
+          <form id="search-form" onSubmit={handleSubmit}>
           <input
-            type="text"
-            className="city"
+            type="search"
+            className="form-control"
             id="po"
             placeholder="Enter a city"
+            onChange={handleCityChange}
           />
           <input type="submit" className="search" id="searchbmit" />
           <button className="current" id="current">
             Current Location
           </button>
         </form>
+
+
 
         <div className="card-group">
           <div className="card">
@@ -79,39 +96,17 @@ export default function Weather(props) {
                         °F
                         </button>
                 </form>
+                <Weatherinfo data={weatherData}/>
               </div>
-              <h5 className="card-title" id="description">
-                {weatherData.description}
-              </h5>
-              <span className="Date"> <FormattedDate date={weatherData.date} />
-              </span>
-              <span className="Precipitation" id="Precipitation">
-                💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙
-              </span>{" "}
-              <span className="percentage"> 💙💙💙💙💙💙💙💙💙💙💙</span>
-              <strong className="wind-title" id="wind-title">
-                Wind Speed: {weatherData.wind}
-              </strong>{" "}
-              <span className="humidity" id="humidity">Humidity: {weatherData.humidity}</span>
-              <span className="unit" id="unit">
-                %
-              </span>
-            </div>
-          </div>
-        </div>
-        <a
-          href="https://github.com/LidlKim/Week7Homework"
-          className="open-link"
-        >
-          Open Source by Hester Grant
-        </a>
-      </div>
+              </div>
+              </div>
+              </div>
+              </div>
+      
     </body>
   ); }
   else  {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return "Loading..";
   }
 }
