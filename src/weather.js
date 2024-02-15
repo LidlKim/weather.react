@@ -3,6 +3,7 @@ import "./index.css";
 import axios from "axios";
 import Weatherinfo from "./WeatherInfo";
 import WeatherIcon from "./WeatherIcon"
+import WeatherTemperature from "./WeatherTemperature";
 
 
 export default function Weather(props) {
@@ -88,17 +89,7 @@ export default function Weather(props) {
               </div>
               
               <div className="weather-temperature">
-                <form>
-                  <span className="cel" id="temperature">
-                    {Math.round(weatherData.temperature)}
-                  </span>{" "}
-                  <button type="button" id="celsius-link" className="active">
-                     °C
-                     </button>
-                     <button type="button" className="fan" id="fan-link">
-                        °F
-                        </button>
-                </form>
+           <WeatherTemperature celsius={props.data.temperature}/>
                 
 
                <div className="float-left">
