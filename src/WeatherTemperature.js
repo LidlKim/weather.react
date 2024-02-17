@@ -38,7 +38,7 @@ else{
      return(
  <div className="WeatherTemperature">
                   <span className="temperature" id="temperature">
-                    {Math.round(props.fahrenheit)}
+                    {Math.round(fahrenheit)}
                   </span>
                  <a href="/" onClick={showCelsius}>
                      °C {" "}

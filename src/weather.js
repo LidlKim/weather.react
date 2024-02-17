@@ -93,7 +93,7 @@ export default function Weather(props) {
 
 
                   <div className="float-left">
-                    <WeatherIcon code={weatherData.icon} />
+                   <WeatherIcon code={weatherData.iconURL} />
                   </div>
                   <Weatherinfo data={weatherData} />
                 </div>
