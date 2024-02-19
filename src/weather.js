@@ -15,6 +15,7 @@ export default function Weather(props) {
 
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -99,7 +100,7 @@ export default function Weather(props) {
                   </div>
                   <Weatherinfo data={weatherData} />
                 </div>
-                 <WeatherForecast />
+                 <WeatherForecast coordinates={weatherData.coordinates} />
                   <a
           href="vhttps://github.com/LidlKim/weather.react"
           className="open-link"
