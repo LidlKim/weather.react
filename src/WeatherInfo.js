@@ -15,9 +15,9 @@ export default function Weatherinfo(props) {
               <FormattedDate date={props.data.date} />
               </span>
               <span className="Precipitation" id="Precipitation">
-                💙💙💙💙💙
+               {" "}
               </span>{" "}
-              <span className="percentage"> 💙💙💙💙💙</span>
+              <span className="percentage"> {" "}</span>
               <strong className="wind-title" id="wind-title">
                 Wind Speed: {props.data.wind}
               </strong>{" "}
@@ -27,12 +27,7 @@ export default function Weatherinfo(props) {
               </span>
             
           
-        <a
-          href="vhttps://github.com/LidlKim/weather.react"
-          className="open-link"
-        >
-          Open Source by Hester Grant
-        </a>
+        
       </div>
 
     

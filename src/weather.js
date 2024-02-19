@@ -4,6 +4,7 @@ import axios from "axios";
 import Weatherinfo from "./WeatherInfo";
 import WeatherIcon from "./WeatherIcon"
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -90,14 +91,23 @@ export default function Weather(props) {
 
                 <div className="weather-temperature">
                   <WeatherTemperature celsius={weatherData.temperature} />
+                 
 
-
+ 
                   <div className="float-left">
                    <WeatherIcon code={weatherData.iconURL} />
                   </div>
                   <Weatherinfo data={weatherData} />
                 </div>
+                 <WeatherForecast />
+                  <a
+          href="vhttps://github.com/LidlKim/weather.react"
+          className="open-link"
+        >
+          Open Source by Hester Grant
+        </a>
               </div>
+              
             </div>
           </div>
         </div>
