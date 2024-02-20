@@ -72,9 +72,7 @@ export default function Weather(props) {
               onChange={handleCityChange}
             />
             <input type="submit" className="search" id="searchbmit" />
-            <button className="current" id="current">
-              Current Location
-            </button>
+           
           </form>
 
 
