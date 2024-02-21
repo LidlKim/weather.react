@@ -47,17 +47,17 @@ export default function Weather(props) {
         <div className="container text-center">
           <div className="row">
             <div className="col-4">
-              <a href="https://www.google.com/search?q=glasgow+weather&oq=glasgow+weather&aqs=chrome.0.69i59j0i131i433i512j0i433i512l2j0i512j0i433i512j0i512l4.5070j1j7&sourceid=chrome&ie=UTF-8">
+              <a className="linky" href="https://www.google.com/search?q=glasgow+weather&oq=glasgow+weather&aqs=chrome.0.69i59j0i131i433i512j0i433i512l2j0i512j0i433i512j0i512l4.5070j1j7&sourceid=chrome&ie=UTF-8">
                 Glasgow
               </a>
             </div>
             <div className="col-4">
-              <a href="https://www.google.com/search?q=london+weather&sxsrf=ALiCzsYJ0_ndyvvYsqr7STHjR0O6aAIEQQ%3A1664741461804&ei=VfA5Y43RMIrYgAbtsqjQAw&ved=0ahUKEwjNz-SbrcL6AhUKLMAKHW0ZCjoQ4dUDCA4&uact=5&oq=london+weather&gs_lcp=Cgdnd3Mtd2l6EAMyBwgjELECECcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAc6BAgAEENKBAhBGABKBAhGGABQAFjqDmDPEWgAcAF4AYAB2ASIAfgHkgEHNC4xLjUtMZgBAKABAcABAQ&sclient=gws-wiz">
+              <a className="linky" href="https://www.google.com/search?q=london+weather&sxsrf=ALiCzsYJ0_ndyvvYsqr7STHjR0O6aAIEQQ%3A1664741461804&ei=VfA5Y43RMIrYgAbtsqjQAw&ved=0ahUKEwjNz-SbrcL6AhUKLMAKHW0ZCjoQ4dUDCA4&uact=5&oq=london+weather&gs_lcp=Cgdnd3Mtd2l6EAMyBwgjELECECcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAc6BAgAEENKBAhBGABKBAhGGABQAFjqDmDPEWgAcAF4AYAB2ASIAfgHkgEHNC4xLjUtMZgBAKABAcABAQ&sclient=gws-wiz">
                 London
               </a>
             </div>
             <div className="col-4">
-              <a href="https://www.google.com/search?q=paris+weather&sxsrf=ALiCzsbwxHKmUhDUCvw-JORlRAK6as9AoA%3A1664741937102&ei=MfI5Y5TmBcKH8gLK8ZegDA&ved=0ahUKEwjUwrb-rsL6AhXCg1wKHcr4BcQQ4dUDCA4&uact=5&oq=paris+weather&gs_lcp=Cgdnd3Mtd2l6EAMyDAgjECcQnQIQRhCAAjIKCAAQsQMQgwEQQzILCAAQgAQQsQMQgwEyBQgAEIAEMgoIABCxAxCDARBDMgsIABCABBCxAxCDATIECAAQQzILCAAQgAQQsQMQgwEyCggAELEDEIMBEEMyBAgAEEM6BwgjELECECc6BggAEB4QB0oECEEYAEoECEYYAFAAWLkJYKgMaABwAXgAgAGYAogB0geSAQU1LjAuMpgBAKABAcABAQ&sclient=gws-wiz">
+              <a className="linky" href="https://www.google.com/search?q=paris+weather&sxsrf=ALiCzsbwxHKmUhDUCvw-JORlRAK6as9AoA%3A1664741937102&ei=MfI5Y5TmBcKH8gLK8ZegDA&ved=0ahUKEwjUwrb-rsL6AhXCg1wKHcr4BcQQ4dUDCA4&uact=5&oq=paris+weather&gs_lcp=Cgdnd3Mtd2l6EAMyDAgjECcQnQIQRhCAAjIKCAAQsQMQgwEQQzILCAAQgAQQsQMQgwEyBQgAEIAEMgoIABCxAxCDARBDMgsIABCABBCxAxCDATIECAAQQzILCAAQgAQQsQMQgwEyCggAELEDEIMBEEMyBAgAEEM6BwgjELECECc6BggAEB4QB0oECEEYAEoECEYYAFAAWLkJYKgMaABwAXgAgAGYAogB0geSAQU1LjAuMpgBAKABAcABAQ&sclient=gws-wiz">
                 Paris
               </a>
             </div>
