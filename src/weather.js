@@ -43,7 +43,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <body>
-        <img href="./pingclouds.jpeg" width="992" alt={"ping clouds"} />
+  
         <div className="container text-center">
           <div className="row">
             <div className="col-4">
