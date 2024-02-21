@@ -36,7 +36,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function search() {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    const apiKey = "743bee57fddbfaf52447193a87d5dd25";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -100,7 +100,7 @@ export default function Weather(props) {
                 </div>
                  <WeatherForecast coordinates={weatherData.coordinates} />
                   <a
-          href="vhttps://github.com/LidlKim/weather.react"
+          href="https://github.com/LidlKim/weather.react"
           className="open-link"
         >
           Open Source by Hester Grant
